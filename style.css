@@ -1,0 +1,37 @@
+body {
+	background-color: #ccaf95;
+}
+
+.header {
+	position: fixed;
+	text-align: center;
+	margin: 40px;
+	font-family: 'Futura';
+}
+
+.main {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin: 50px;
+	font-family: 'Avenir Next';
+	color: white;
+}
+
+.feed {
+	text-align: left;
+	line-height: 40px;
+}
+
+.content {
+	width: 500px;
+	line-height: 0px;
+}
+
+.submit {
+	padding-top: 100px;
+	line-height: 30px;
+	color: white;
+	line-height: 40px;
+}
