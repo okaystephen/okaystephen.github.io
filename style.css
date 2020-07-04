@@ -1,12 +1,9 @@
 body {
-	background-color: #ccaf95;
-}
-
-.header {
-	position: fixed;
-	text-align: center;
-	margin: 40px;
-	font-family: 'Futura';
+	background-image: url("tenor.gif");
+	height: 100%; 
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
 }
 
 .main {
@@ -19,19 +16,12 @@ body {
 	color: white;
 }
 
-.feed {
-	text-align: left;
-	line-height: 40px;
-}
-
-.content {
-	width: 500px;
-	line-height: 0px;
-}
-
-.submit {
-	padding-top: 100px;
-	line-height: 30px;
-	color: white;
-	line-height: 40px;
+.title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Helvetica Neue';
+	text-align: center;
+	color: rgb(255, 255, 255); /*white text*/
 }
