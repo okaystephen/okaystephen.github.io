@@ -41,7 +41,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -55,28 +55,49 @@
   </nav>
 
   <!-- HEADER -->
-  <div class="header-container container-fluid text-left my-5 mx-3 p-5">
-    <h1>Hey,</h1>
+  <div class="header-container container-fluid text-left my-5 p-5">
+    <h1 class="text-uppercase heading-color" style="font-weight: bold; ">Yo dream!</h1>
     <span id="header_typed"></span>
   </div>
 
   <!-- CONTENT -->
-  <div class="body-container container-fluid text-left my-5 mx-3 p-5">
-    <div class="body-1 row d-flex align-items-center pb-5">
+  <div class="body-container container-fluid text-center my-5 p-5"
+    style="background-image: url(assets/img/skies.jpg); opacity: 0.9;">
+    <h1 class="text-uppercase heading-color" style="font-weight: bold; text-shadow: 0 0 20px grey;">#OustDuterte!
+    </h1>
+    <p style="color: white;">Let's hold the government accountable.</p>
+    <span>
+      <a class="btn btn-outline-light" href="">Voter's
+        Registration</a>
+      <a class="btn btn-outline-light" href="">About the Administration</a>
+    </span>
+  </div>
+
+  <div class="body-container container-fluid text-left my-5 pt-5 pb-3">
+    <div class="row d-flex align-items-center pb-5">
       <div class="col-5 text-center">
         <img src="assets/img/drink_tapioka_tea_schoolboy.png" width="50%">
       </div>
       <div class="col-7 text-left">
-        <h2><i>Milktea?</i></h2>
+        <h2 class="heading-color"><i>Milktea?</i></h2>
         <p>Yes please.</p>
       </div>
     </div>
   </div>
 
+  <!-- FOOTER -->
+  <footer class="py-5 text-center">
+    <h5>Hey, It's Stephen.</h5>
+    <span>
+      <a href="http://twitter.com/mujisteph">Twitter</a>
+      <a href="http://open.spotify.com/user/stephensalamante?si=rGkmH7mrS1qiJl-bVvwkew">Spotify</a>
+      <a href="http://github.com/okaystephen">Github</a>
+    </span>
+  </footer>
+
   <!-- SCRIPT -->
   <script>
     var header_typed = new Typed('#header_typed', {
-      // strings: ['It\'s Stephen.', 'Ji Changmin first,^100 `everything else second.`'],
       strings: ['It\'s Stephen.', 'Ji Changmin first,', 'Ji Changmin first, everything else second.'],
       typeSpeed: 40,
       backSpeed: 0,
@@ -84,8 +105,8 @@
       loop: true
     });
 
-    ScrollReveal().reveal('.header-container');
-    ScrollReveal().reveal('.body-1');
+    ScrollReveal({ reset: true }).reveal('.header-container');
+    ScrollReveal({ reset: true }).reveal('.body-container');
   </script>
 </body>
 
