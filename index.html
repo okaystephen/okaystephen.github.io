@@ -61,7 +61,7 @@
   </div>
 
   <!-- CONTENT -->
-  <div class="body-container container-fluid text-center my-5 p-5"
+  <div class="body-container container-fluid text-center my-5 px-2 p-5"
     style="background-image: url(assets/img/skies.jpg); opacity: 0.9;">
     <h1 class="text-uppercase heading-color" style="font-weight: bold; text-shadow: 0 0 20px grey;">#OustDuterte!
     </h1>
@@ -73,21 +73,22 @@
     </span>
   </div>
 
-  <div class="body-container container-fluid text-left my-5 pt-5 pb-3">
+  <div class="body-container container-fluid text-left my-5 pt-5 px-3 pb-3">
     <div class="row d-flex align-items-center pb-5">
       <div class="col-5 text-center">
         <img src="assets/img/drink_tapioka_tea_schoolboy.png" width="50%">
       </div>
       <div class="col-7 text-left">
-        <h2 class="heading-color"><i>Milktea?</i></h2>
-        <p>Yes please.</p>
+        <h2 class="heading-color" style="font-weight: bold;"><i>Best Milktea?</i></h2>
+        <p>Here is why <b>Serenitea</b> is the best milktea place, <i>ever</i>.</p>
+        <a class=" btn btn-outline-dark" href="">Learn More</a>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="py-5 text-center">
-    <h5>Hey, It's Stephen.</h5>
+    <h5><span id="footer_typed"></span></h5>
     <span>
       <a href="http://twitter.com/mujisteph">Twitter</a>
       <a href="http://open.spotify.com/user/stephensalamante?si=rGkmH7mrS1qiJl-bVvwkew">Spotify</a>
@@ -99,6 +100,14 @@
   <script>
     var header_typed = new Typed('#header_typed', {
       strings: ['It\'s Stephen.', 'Ji Changmin first,', 'Ji Changmin first, everything else second.'],
+      typeSpeed: 40,
+      backSpeed: 0,
+      smartBackspace: true,
+      loop: true
+    });
+
+    var footer_typed = new Typed('#footer_typed', {
+      strings: ['Hey,', 'Hey, It\'s Stephen.'],
       typeSpeed: 40,
       backSpeed: 0,
       smartBackspace: true,
