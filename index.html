@@ -94,11 +94,14 @@
     </div>
   </div>
 
-  <div class="body-container body-1 container-fluid text-center pt-5 px-3 pb-3"
+  <div class="body-container body-2 container-fluid text-center pt-5 px-3 pb-3"
     style="background-image: url(assets/img/yes.png); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
-    <div class="row body-1-inside d-flex align-items-center">
-      <iframe src="https://open.spotify.com/embed/track/3UNXEhxZ1bXQ87osUTfxQl" width="300" height="300" frameborder="0"
-        allowtransparency="true" allow="encrypted-media"></iframe>
+    <div class="row body-1-inside d-flex flex-column align-items-center">
+      <h2 class="heading-color" style="font-weight: bold;"><span id="stream_tbz"></span></h2>
+      <div class="pt-2">
+        <iframe src="https://open.spotify.com/embed/track/3UNXEhxZ1bXQ87osUTfxQl" width="300" height="300"
+          frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
     </div>
   </div>
 
@@ -125,6 +128,14 @@
 
     var footer_typed = new Typed('#footer_typed', {
       strings: ['Hey,', 'Hey, It\'s Stephen.'],
+      typeSpeed: 40,
+      backSpeed: 0,
+      smartBackspace: true,
+      loop: true
+    });
+
+    var stream_tbz = new Typed('#stream_tbz', {
+      strings: ['Stream! ', 'Stream! Stream! ', 'Stream! Stream! Stream!'],
       typeSpeed: 40,
       backSpeed: 0,
       smartBackspace: true,

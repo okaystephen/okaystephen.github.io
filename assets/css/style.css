@@ -57,6 +57,11 @@ p, span {
   min-height: 400px;
 }
 
+.body-2 {
+  position: relative;
+  min-height: 500px;
+}
+
 .body-1-inside {
   margin: 0;
   position: absolute;
