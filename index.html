@@ -30,12 +30,14 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <!--   Typed.js   -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2bb66671d.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="body">
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
-    <a class="navbar-brand" href="/home"><img src="assets/img/biyou_pack_man.png" width="50"></a>
+    <a class="navbar-brand" href="/index.html"><img src="assets/img/biyou_pack_man.png" width="50"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
       aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -43,13 +45,13 @@
     <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/index.html">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="/about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/projects">Projects</a>
+          <a class="nav-link" href="/project.html">Projects</a>
         </li>
       </ul>
     </div>
@@ -57,7 +59,7 @@
 
   <!-- HEADER -->
   <div class="header-container container-fluid text-left p-5"
-    style="background-image: url(assets/img/header-1.png); background-size: cover; background-repeat: no-repeat; opacity: 0.9;">
+    style="background-image: url(assets/img/header-1.png); background-size: cover; background-repeat: no-repeat; background-position: right; opacity: 0.9;">
     <div class="header-text">
       <h1 class="text-uppercase heading-color" style="font-weight: bold; ">Yo dream!</h1>
       <span><span id="header_typed"></span></span>
@@ -65,16 +67,18 @@
   </div>
 
   <!-- CONTENT -->
-  <div class="body-container container-fluid text-center px-2 p-5"
+  <div class="body-container body-1 container-fluid text-center px-2 p-5"
     style="background-image: url(assets/img/skies.jpg); opacity: 0.9;">
-    <h1 class="text-uppercase heading-color" style="font-weight: bold; text-shadow: 0 0 20px grey;">#OustDuterte!
-    </h1>
-    <p style="color: white;">Let's hold the government accountable.</p>
-    <span>
-      <a class="btn btn-outline-light" href="">Voter's
-        Registration</a>
-      <a class="btn btn-outline-light" href="">About the Administration</a>
-    </span>
+    <div class="body-1-inside">
+      <h1 class="text-uppercase heading-color" style="font-weight: bold; text-shadow: 0 0 20px grey;">#OustDuterte!
+      </h1>
+      <p style="color: white;">Let's hold the government accountable.</p>
+      <span>
+        <a class="btn btn-outline-light"
+          href="https://www.comelec.gov.ph/?r=VoterRegistration/WhatisVoterRegistration/RegistrationRequirements">Voter's
+          Registration</a>
+      </span>
+    </div>
   </div>
 
   <div class="body-container container-fluid text-left pt-5 px-3 pb-3"
@@ -95,9 +99,10 @@
   <footer class="footer py-5 text-center">
     <h5><span id="footer_typed"></span></h5>
     <span>
-      <a href="http://twitter.com/mujisteph">Twitter</a>
-      <a href="http://open.spotify.com/user/stephensalamante?si=rGkmH7mrS1qiJl-bVvwkew">Spotify</a>
-      <a href="http://github.com/okaystephen">Github</a>
+      <a href="http://twitter.com/mujisteph" class="px-1"><i class="fab fa-twitter"></i></a>
+      <a href="http://open.spotify.com/user/stephensalamante?si=rGkmH7mrS1qiJl-bVvwkew" class="px-1"><i
+          class="fab fa-spotify"></i></a>
+      <a href="http://github.com/okaystephen" class="px-1"><i class="fab fa-github"></i></a>
     </span>
   </footer>
 
