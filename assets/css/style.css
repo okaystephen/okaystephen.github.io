@@ -21,6 +21,15 @@ p, span {
   font-weight: 400;
   font-size: 14px;
   opacity: 0.9;
+  transition: top 0.4s;
+}
+
+.navbar a {
+  transition-duration: 0.4s;
+}
+
+.navbar a:hover {
+  transition-duration: 0.4s;
 }
 
 .heading-color {
