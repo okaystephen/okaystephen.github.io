@@ -42,16 +42,6 @@ p, span {
   height: 90%;
 }
 
-/* .header-text {
-  width: 50%;
-  height: 50%;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  
-} */
-
 .header-text {
   margin: 0;
   position: absolute;
@@ -63,7 +53,7 @@ p, span {
 
 .body-1 {
   position: relative;
-  min-height: 400px;
+  min-height: 500px;
 }
 
 .body-2 {

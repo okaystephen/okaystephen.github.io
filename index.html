@@ -6,8 +6,7 @@
   <title>stephen!</title>
 
   <!-- CSS FILES -->
-  <link rel="shortcut icon" href="assets/img/source1.gif">
-  <!-- <link rel="icon" href="assets/img/source1.gif" type="image/gif" sizes="16x16"> -->
+  <link rel="shortcut icon" href="assets/img/rainbow.png">
   <link rel="stylesheet" type="text/css" media="all" href="assets/css/style.css">
   <!-- FONTS -->
   <link
@@ -83,14 +82,14 @@
     </div>
   </div>
 
-  <div class="body-container body-1 container-fluid text-left pt-5 px-3 pb-3"
+  <div class="body-container body-1 container-fluid pt-5 px-3 pb-3"
     style="background-image: url(assets/img/header-2.png); background-size: cover; background-repeat: no-repeat; opacity: 0.9;">
     <div class="row body-1-inside d-flex align-items-center">
-      <div class="col text-left">
+      <div class="col text-right">
         <h2 class="heading-color" style="font-weight: bold;">The Boyz!</h2>
         <p>If you haven't stanned them yet, <b>why?</b></p>
         <p>Start now.</p>
-        <a class=" btn btn-outline-dark" href="https://www.youtube.com/watch?v=c_e-IC0VwZM"
+        <a class=" btn btn-outline-dark text-center" href="https://www.youtube.com/watch?v=c_e-IC0VwZM"
           style="font-size: 1.em;">'The Stealer' MV</a>
       </div>
     </div>
@@ -146,6 +145,17 @@
 
     ScrollReveal({ reset: true }).reveal('.header-container');
     ScrollReveal({ reset: true }).reveal('.body-container');
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementsByClassName("navbar").style.top = "0";
+      } else {
+        document.getElementsByClassName("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
   </script>
 </body>
 
