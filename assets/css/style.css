@@ -42,8 +42,17 @@ p, span {
   font-style: oblique;
 }
 
+.active {
+  font-style: italic;
+  text-decoration: underline;
+}
+
 .heading-color {
   color: #98b6c9
+}
+
+.heading-two-color {
+  color: #514645;
 }
 
 .header-container {
