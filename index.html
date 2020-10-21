@@ -37,14 +37,22 @@
 
 <body class="body">
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
-    <a class="navbar-brand" href="/index.html"><img src="assets/img/biyou_pack_man.png" width="50"></a>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="/index.html">
+      <!-- <img src="assets/img/biyou_pack_man.png" width="50"> -->
+      <!-- <b><i>steph!</i></b> -->
+      <div class="navbar-title">steph!</div>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
       aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-hamburger" style="color:#514645; font-size:28px;"></i>
+      </span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <div class="collapse navbar-collapse navbar-right" id="navbarToggler">
+      <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item active">
           <a class="nav-link" href="/index.html">Home<span class="sr-only">(current)</span></a>
         </li>
@@ -62,14 +70,14 @@
   <div class="header-container container-fluid text-left p-5"
     style="background-image: url(assets/img/header-1.png); background-size: cover; background-repeat: no-repeat; background-position: right; opacity: 0.9;">
     <div class="header-text">
-      <h1 class="text-uppercase heading-color" style="font-weight: bold; ">Yo dream!</h1>
+      <h1 class="heading-color" style="font-weight: bold; ">hey it's stephen!</h1>
       <span><span id="header_typed"></span></span>
     </div>
   </div>
 
   <!-- CONTENT -->
   <div class="body-container body-1 container-fluid text-center px-2 p-5"
-    style="background-image: url(assets/img/skies.jpg); opacity: 0.9;">
+    style="background-image: url(assets/img/skies.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
     <div class="body-1-inside">
       <h1 class="text-uppercase heading-color" style="font-weight: bold; text-shadow: 0 0 20px grey;">#OustDuterte!
       </h1>
@@ -120,7 +128,8 @@
   <!-- SCRIPT -->
   <script>
     var header_typed = new Typed('#header_typed', {
-      strings: ['It\'s Stephen.', 'Ji Changmin first,', 'Ji Changmin first, everything else second.'],
+      // strings: ['It\'s Stephen.', 'Ji Changmin first,', 'Ji Changmin first, everything else second.'],
+      strings: ['i love design, tech, and everything in between.', 'my pronouns are he/him', 'currently, a third year dlsu ccs student'],
       typeSpeed: 40,
       backSpeed: 0,
       smartBackspace: true,
@@ -128,7 +137,7 @@
     });
 
     var footer_typed = new Typed('#footer_typed', {
-      strings: ['Hey,', 'Hey, It\'s Stephen.'],
+      strings: ['made by', 'made by steph!'],
       typeSpeed: 40,
       backSpeed: 0,
       smartBackspace: true,

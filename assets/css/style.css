@@ -6,6 +6,10 @@
 #f7958a - red
 */
 
+body {
+  cursor: crosshair;
+}
+
 .body {
   background-color: #eeede0;
   font-family: 'Epilogue', sans-serif;
@@ -16,20 +20,26 @@ p, span {
 }
 
 .navbar { 
-  background-color: #8ead95; 
+  /* background-color: #8ead95;  */
   font-family: 'Epilogue', sans-serif;
   font-weight: 400;
   font-size: 14px;
+  color: #514645 !important; 
   opacity: 0.9;
   transition: top 0.4s;
 }
 
 .navbar a {
+  color: #514645;
   transition-duration: 0.4s;
 }
 
 .navbar a:hover {
   transition-duration: 0.4s;
+}
+
+.navbar-title {
+  font-style: oblique;
 }
 
 .heading-color {
@@ -39,7 +49,7 @@ p, span {
 .header-container {
   /* max-height: 400px; */
   position: relative;
-  height: 90%;
+  height: 100%;
 }
 
 .header-text {
@@ -53,12 +63,14 @@ p, span {
 
 .body-1 {
   position: relative;
-  min-height: 500px;
+  /* min-height: 500px; */
+  height: 90%;
 }
 
 .body-2 {
   position: relative;
-  min-height: 500px;
+  /* min-height: 500px; */
+  height: 90%;
 }
 
 .body-1-inside {
