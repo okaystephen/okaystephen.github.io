@@ -73,13 +73,13 @@ p, span {
 .body-1 {
   position: relative;
   /* min-height: 500px; */
-  height: 90%;
+  height: 100%;
 }
 
 .body-2 {
   position: relative;
   /* min-height: 500px; */
-  height: 90%;
+  height: 100%;
 }
 
 .body-1-inside {
