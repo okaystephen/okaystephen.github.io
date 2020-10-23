@@ -37,34 +37,12 @@
 
 <body class="body">
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="/index.html">
-      <!-- <img src="assets/img/biyou_pack_man.png" width="50"> -->
-      <!-- <b><i>steph!</i></b> -->
-      <div class="navbar-title">steph!</div>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <!-- <span class="navbar-toggler-icon"></span> -->
-      <span class="navbar-toggler-icon">
-        <i class="fas fa-hamburger" style="color:#514645; font-size:28px;"></i>
-      </span>
-    </button>
-    <div class="collapse navbar-collapse navbar-right" id="navbarToggler">
-      <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about.html">About</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/project.html">Projects<span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="nav"></div>
+  <script>
+    $(document).ready(function () {
+      $('#nav').load('nav.html');
+    });
+  </script>
 
   <!-- HEADER -->
   <div class="header-container container-fluid text-left p-5"
@@ -76,17 +54,12 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer py-5 text-center">
-    <h5><span id="footer_typed"></span></h5>
-    <span>
-      <a href="http://twitter.com/mujisteph" class="px-1"><i class="fab fa-twitter"></i></a>
-      <a href="http://open.spotify.com/user/stephensalamante?si=rGkmH7mrS1qiJl-bVvwkew" class="px-1"><i
-          class="fab fa-spotify"></i></a>
-      <a href="http://github.com/okaystephen" class="px-1"><i class="fab fa-github"></i></a>
-      <a href="http://instagram.com/mujisteph" class="px-1"><i class="fab fa-instagram"></i></a>
-      <a href="http://linkedin.com/in/stephensalamante/" class="px-1"><i class="fab fa-linkedin"></i></a>
-    </span>
-  </footer>
+  <div id="footer"></div>
+  <script>
+    $(document).ready(function () {
+      $('#footer').load('footer.html');
+    });
+  </script>
 
   <!-- SCRIPT -->
   <script>
@@ -98,22 +71,6 @@
       smartBackspace: true,
       loop: true
     });
-
-    var footer_typed = new Typed('#footer_typed', {
-      strings: ['made by', 'made by steph!'],
-      typeSpeed: 40,
-      backSpeed: 0,
-      smartBackspace: true,
-      loop: true
-    });
-
-    // var stream_tbz = new Typed('#stream_tbz', {
-    //   strings: ['Stream! ', 'Stream! Stream! ', 'Stream! Stream! Stream!'],
-    //   typeSpeed: 40,
-    //   backSpeed: 0,
-    //   smartBackspace: true,
-    //   loop: true
-    // });
 
     ScrollReveal({ reset: true }).reveal('.header-container');
     ScrollReveal({ reset: true }).reveal('.body-container');
