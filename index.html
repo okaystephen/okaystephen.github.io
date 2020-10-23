@@ -36,34 +36,12 @@
 
 <body class="body">
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="/index.html">
-      <!-- <img src="assets/img/biyou_pack_man.png" width="50"> -->
-      <!-- <b><i>steph!</i></b> -->
-      <div class="navbar-title">steph!</div>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <!-- <span class="navbar-toggler-icon"></span> -->
-      <span class="navbar-toggler-icon">
-        <i class="fas fa-hamburger" style="color:#514645; font-size:28px;"></i>
-      </span>
-    </button>
-    <div class="collapse navbar-collapse navbar-right" id="navbarToggler">
-      <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="/index.html">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/project.html">Projects</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="nav"></div>
+  <script>
+    $(document).ready(function () {
+      $('#nav').load('nav.html');
+    });
+  </script>
 
   <!-- HEADER -->
   <div class="header-container container-fluid text-left p-5"
@@ -76,7 +54,7 @@
 
   <!-- CONTENT -->
   <div class="body-container body-1 container-fluid text-center px-2 p-5"
-    style="background-image: url(assets/img/skies.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
+    style="background-image: url(assets/img/skies.jpg);">
     <div class="body-1-inside">
       <h1 class="text-uppercase heading-color" style="font-weight: bold; text-shadow: 0 0 20px grey;">#ABOUTME!
       </h1>
@@ -88,7 +66,7 @@
   </div>
 
   <div class="body-container body-1 container-fluid pt-5 px-3 pb-3"
-    style="background-image: url(assets/img/header-2.png); background-size: cover; background-repeat: no-repeat; opacity: 0.9;">
+    style="background-image: url(assets/img/header-2.png);">
     <div class="body-1-inside text-right">
       <h2 class="heading-color" style="font-weight: bold;">projects!</h2>
       <p><b><i>eek,</i></b></p>
@@ -98,7 +76,7 @@
   </div>
 
   <div class="body-container body-2 container-fluid text-center pt-5 px-3 pb-3"
-    style="background-image: url(assets/img/yes.png); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
+    style="background-image: url(assets/img/yes.png);">
     <div class="body-1-inside">
       <h3 class="heading-two-color" style="font-weight: bold;">stan tbz pls</h3>
       <div class="pt-3">
