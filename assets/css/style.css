@@ -70,13 +70,6 @@ p, span {
   transform: translate(-50%, -50%);
 }
 
-.body-container {
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center; 
-  opacity: 0.9;
-}
-
 .body-1 {
   position: relative;
   /* min-height: 500px; */
