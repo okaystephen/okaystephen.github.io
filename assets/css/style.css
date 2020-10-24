@@ -42,6 +42,19 @@ p, span {
   font-style: oblique;
 }
 
+.custom-link {
+  font-family: 'IBM Plex Mono', monospace;
+  text-decoration: underline;  
+  font-weight: 500;
+  transition-duration: 0.4s;
+}
+
+.custom-link:hover {
+  font-weight: 500;
+  text-decoration: line-through;
+  transition-duration: 0.4s;
+}
+
 .img-hover {
   filter: grayscale(100%);
   transition-duration: 0.4s;
