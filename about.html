@@ -45,10 +45,10 @@
 
   <!-- HEADER -->
   <div class="header-container container-fluid text-left p-5"
-    style="background-image: url(assets/img/source.gif); background-size: cover; background-repeat: no-repeat; background-position: right; opacity: 0.9;">
-    <div class="header-text text-center">
-      <h1 class="heading-color" style="font-weight: bold; ">😳</h1>
-      <span style="color: white; ">about page a work in progress!</span>
+    style="background-image: url(assets/img/about-bg.png); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
+    <div class="header-text">
+      <h1 class="heading-about-color" style="font-weight: bold; ">about me!</h1>
+      <span><span id="aboutheader_typed" style="color: #f7958a;"></span></span>
     </div>
   </div>
 
@@ -62,6 +62,15 @@
 
   <!-- SCRIPT -->
   <script src="assets/js/script.js"></script>
+  <script>
+    var aboutheader_typed = new Typed('#aboutheader_typed', {
+      strings: ['in the mind of a boy with a dysfunctional body clock'],
+      typeSpeed: 40,
+      backSpeed: 0,
+      smartBackspace: true,
+      loop: true
+    });
+  </script>
 </body>
 
 </html>

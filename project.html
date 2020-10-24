@@ -45,10 +45,35 @@
 
   <!-- HEADER -->
   <div class="header-container container-fluid text-left p-5"
-    style="background-image: url(assets/img/source.gif); background-size: cover; background-repeat: no-repeat; background-position: right; opacity: 0.9;">
-    <div class="header-text text-center">
-      <h1 class="heading-color" style="font-weight: bold; ">😳</h1>
-      <span style="color: white; ">proj page a work in progress!</span>
+    style="background-image: url(assets/img/proj-bg.png); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
+    <div class="header-text">
+      <h1 class="heading-proj-color" style="font-weight: bold; ">projects!</h1>
+      <span><span id="projheader_typed"></span></span>
+    </div>
+  </div>
+
+  <div class="container-fluid px-5 pb-3">
+    <div class="row body-container py-5 text-center">
+      <div class="col-lg text-left">
+        <h1 class="heading-proj-color" style="font-weight: bold; ">_01 dlsu arrows express</h1>
+        <p><b>HTML, CSS, JavaScript, NodeJS, Express, MongoDB</b></p>
+        <p>web application to simplify the shuttle reservation system of dlsu, as our machine project for our web
+          application development course</p>
+      </div>
+      <div class="col-lg py-2 text-center">
+        <img src="assets/img/proj-1.gif" width="100%" class="img-hover">
+      </div>
+    </div>
+
+    <div class="row body-container py-5">
+      <div class="col-lg">
+        <h1 class="heading-proj-color" style="font-weight: bold; ">_02 the initiative ph</h1>
+        <p><b>HTML, CSS, JavaScript, NodeJS, Express, MongoDB</b></p>
+        <p>web application for tiph, as our term-long project for our software engineering course</p>
+      </div>
+      <div class="col-lg py-2 text-center">
+        <img src="assets/img/proj-2.gif" width="100%" class="img-hover">
+      </div>
     </div>
   </div>
 
@@ -62,6 +87,15 @@
 
   <!-- SCRIPT -->
   <script src="assets/js/script.js"></script>
+  <script>
+    var projheader_typed = new Typed('#projheader_typed', {
+      strings: ['mostly school projs 🏃‍'],
+      typeSpeed: 40,
+      backSpeed: 0,
+      smartBackspace: true,
+      loop: true
+    });
+  </script>
 </body>
 
 </html>
