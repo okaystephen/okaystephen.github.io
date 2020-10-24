@@ -61,30 +61,7 @@
   </script>
 
   <!-- SCRIPT -->
-  <script>
-    var header_typed = new Typed('#header_typed', {
-      // strings: ['It\'s Stephen.', 'Ji Changmin first,', 'Ji Changmin first, everything else second.'],
-      strings: ['about page,', 'about page, a work in progress!'],
-      typeSpeed: 40,
-      backSpeed: 0,
-      smartBackspace: true,
-      loop: true
-    });
-
-    ScrollReveal({ reset: true }).reveal('.header-container');
-    ScrollReveal({ reset: true }).reveal('.body-container');
-
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementsByClassName("navbar").style.top = "0";
-      } else {
-        document.getElementsByClassName("navbar").style.top = "-50px";
-      }
-      prevScrollpos = currentScrollPos;
-    }
-  </script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
