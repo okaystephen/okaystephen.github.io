@@ -1,27 +1,3 @@
-var header_typed = new Typed('#header_typed', {
-  strings: ['i love design, tech, and everything in between.', 'my pronouns are he/him', 'currently, a third year dlsu ccs student'],
-  typeSpeed: 40,
-  backSpeed: 0,
-  smartBackspace: true,
-  loop: true
-});
-
-var projheader_typed = new Typed('#projheader_typed', {
-  strings: ['mostly school projs 🏃‍'],
-  typeSpeed: 40,
-  backSpeed: 0,
-  smartBackspace: true,
-  loop: true
-});
-
-var aboutheader_typed = new Typed('#aboutheader_typed', {
-  strings: ['in the mind of a boy with a dysfunctional body clock'],
-  typeSpeed: 40,
-  backSpeed: 0,
-  smartBackspace: true,
-  loop: true
-});
-
 // ScrollReveal({ reset: true }).reveal('.header-container');
 ScrollReveal().reveal('.header-container');
 ScrollReveal().reveal('.body-container');
