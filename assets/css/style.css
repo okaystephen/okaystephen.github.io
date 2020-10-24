@@ -43,27 +43,55 @@ p, span {
 }
 
 .custom-link {
+  color: inherit;
   font-family: 'IBM Plex Mono', monospace;
-  text-decoration: underline;  
+  /* text-decoration: underline;   */
   font-weight: 500;
-  transition-duration: 0.4s;
+  text-shadow: 0 0 0 grey;
+  transition: .5s ease;
 }
 
 .custom-link:hover {
   font-weight: 500;
-  text-decoration: line-through;
-  transition-duration: 0.4s;
+  text-shadow: 0 0 13px #514645;
+  text-decoration: none;
 }
 
 .img-hover {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition-duration: 0.4s;
+  box-shadow: 10px 10px #8ead95;
 }
 
-.img-hover:hover {
+/* .img-hover:hover {
   filter: grayscale(0%);
   transition-duration: 0.4s;
   box-shadow: 10px 10px #8ead95;
+} */
+
+.noise {
+  background-image: url('../img/noisy.gif');
+  position: absolute;
+  top: 8;
+  bottom: 8;
+  left: 15;
+  right: 15;
+  opacity: 0.3;
+  transition: .5s ease;
+  overflow:hidden;
+}
+
+.noise:hover {
+  background-image: url('../img/noisy.gif');
+  position: absolute;
+  top: 8;
+  bottom: 8;
+  left: 15;
+  right: 15;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(259, 67, 95, 0.7);
+  overflow:hidden;
 }
 
 .active {
