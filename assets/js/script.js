@@ -14,6 +14,14 @@ var projheader_typed = new Typed('#projheader_typed', {
   loop: true
 });
 
+var aboutheader_typed = new Typed('#aboutheader_typed', {
+  strings: ['in the mind of a boy with a dysfunctional body clock'],
+  typeSpeed: 40,
+  backSpeed: 0,
+  smartBackspace: true,
+  loop: true
+});
+
 // ScrollReveal({ reset: true }).reveal('.header-container');
 ScrollReveal().reveal('.header-container');
 ScrollReveal().reveal('.body-container');
