@@ -6,7 +6,7 @@
   <meta name="keywords" content="personal, portfolio, web, art">
   <meta name="author" content="Stephen Salamante">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stephen! ✰ about</title>
+  <title>stephen! - about</title>
 
   <!-- CSS FILES -->
   <link rel="shortcut icon" href="assets/img/rainbow.png">
@@ -14,6 +14,9 @@
   <!-- FONTS -->
   <link
     href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -39,35 +42,64 @@
 
 <body class="body">
   <!-- NAVBAR -->
-  <div id="nav"></div>
+  <!-- <div id="nav"></div>
   <script>
     $(document).ready(function () {
       $('#nav').load('nav.html');
     });
-  </script>
+  </script> -->
+
+  <nav class="navbar navbar-expand-lg fixed-top px-4">
+    <!-- <a class="navbar-brand" href="/">
+            <div class="navbar-title">steph!</div>
+          </a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-hamburger" style="color:#514645; font-size:28px;"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse navbar-right" id="navbarToggler">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/about.html">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/project.html">projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com">resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- HEADER -->
-  <div class="header-container container-fluid text-left p-5"
-    style="background-image: url(assets/img/about-bg.png); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
+  <!-- <div class="header-container container-fluid text-left p-5"
+    style="background-image: url(assets/img/header-1.png); background-size: cover; background-repeat: no-repeat; background-position: right; opacity: 0.9;">
     <div class="header-text">
-      <h1 class="heading-about-color" style="font-weight: bold; ">about me!</h1>
-      <span><span id="aboutheader_typed" class="heading-about-color"></span></span>
+      <h1 class="heading-color" style="font-weight: bold; ">stephen salamante</h1>
+      <span><span id="header_typed" class="heading-color"></span></span>
     </div>
-  </div>
+  </div> -->
 
-  <!-- CONTENT -->
-  <div class="body-container body-1 container-fluid text-center px-2 p-5"
-    style="background-image: url(assets/img/noisy.gif); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: black; opacity: 0.5; height: 50%;">
-    <div class="body-1-inside">
-      <h1 style="font-weight: bold; text-shadow: 0 0 20px whitesmoke; color: white;">fixing it
-        brb<i>!</i>
-      </h1>
-      <div class="pt-3" style="color: white;">currently swarmed with acads</div>
+  <div class="container-flex px-4 padding-top h-100 d-flex">
+    <div class="justify-content-center align-self-top">
+      <!-- <h1 style="font-weight: bold; ">stephen salamante</h1> -->
+      <a href="/" style="color: inherit;"><i class="fas fa-arrow-left fa-2x"></i></a>
+      <div class="py-3">
+        <h1 class="special-header">about</h1>
+        A work in progress, zzz.
+      </div>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <div id="footer"></div>
+  <div id="footer">
+  </div>
   <script>
     $(document).ready(function () {
       $('#footer').load('footer.html');
@@ -76,15 +108,6 @@
 
   <!-- SCRIPT -->
   <script src="assets/js/script.js"></script>
-  <script>
-    var aboutheader_typed = new Typed('#aboutheader_typed', {
-      strings: ['in the mind of a boy with a dysfunctional body clock'],
-      typeSpeed: 40,
-      backSpeed: 0,
-      smartBackspace: true,
-      loop: false
-    });
-  </script>
 </body>
 
 </html>

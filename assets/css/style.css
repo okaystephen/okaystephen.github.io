@@ -6,13 +6,32 @@
 #f7958a - red
 */
 
+@font-face {
+    font-family: "ITC Grouch";
+    src: url('ITCGrouch.ttf') format("truetype");
+}
+
 body {
   cursor: crosshair;
 }
 
 .body {
-  background-color: #eeede0;
+  background-color: #F6EEE3;
+  color: #514645;
   font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+}
+
+.active {
+  text-decoration: none!important;
+}
+
+.padding-top {
+  padding-top: 70px;
+}
+
+.special-header {
+  font-family: "ITC Grouch";
 }
 
 p, span {

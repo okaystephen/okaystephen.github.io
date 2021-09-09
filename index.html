@@ -42,61 +42,63 @@
 
 <body class="body">
   <!-- NAVBAR -->
-  <div id="nav"></div>
+  <!-- <div id="nav"></div>
   <script>
     $(document).ready(function () {
       $('#nav').load('nav.html');
     });
-  </script>
+  </script> -->
+
+  <nav class="navbar navbar-expand-lg fixed-top px-4">
+    <!-- <a class="navbar-brand" href="/">
+            <div class="navbar-title">steph!</div>
+          </a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-hamburger" style="color:#514645; font-size:28px;"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse navbar-right" id="navbarToggler">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/project.html">projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com">resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- HEADER -->
-  <div class="header-container container-fluid text-left p-5"
+  <!-- <div class="header-container container-fluid text-left p-5"
     style="background-image: url(assets/img/header-1.png); background-size: cover; background-repeat: no-repeat; background-position: right; opacity: 0.9;">
     <div class="header-text">
-      <h1 class="heading-color" style="font-weight: bold; ">hey it's stephen!</h1>
+      <h1 class="heading-color" style="font-weight: bold; ">stephen salamante</h1>
       <span><span id="header_typed" class="heading-color"></span></span>
     </div>
-  </div>
+  </div> -->
 
-  <!-- CONTENT -->
-  <div class="body-container body-1 container-fluid text-center px-2 p-5"
-    style="background-image: url(assets/img/skies.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
-    <div class="body-1-inside">
-      <h1 class=" heading-color" style="font-weight: bold; text-shadow: 0 0 20px grey;">#aboutme<i>!</i>
-      </h1>
-      <div class="py-3" style="color: #eeede0;">i think about <i>muji</i> way too much ☻</div>
-      <!-- <p style="color: white;">i think about <i>kånken</i> and <i>muji</i> way too much ...</p> -->
-      <!-- <span><a class="btn btn-outline-light" href="/about.html">more about steph 🌀</a></span> -->
-      <a class="custom-link text-center" style="color: #eeede0;" href="/about.html">↪
-        <u>more about steph</u></a>
-    </div>
-  </div>
-
-  <div class="body-container body-1 container-fluid pt-5 px-3 pb-3"
-    style="background-image: url(assets/img/header-2.png); background-size: cover; background-repeat: no-repeat; opacity: 0.9;">
-    <div class="body-1-inside text-right">
-      <h2 class="heading-proj-color" style="font-weight: bold;">projects!</h2>
-      <!-- <p><b><i>umm,</i></b></p> -->
-      <p class="pt-3"><i>re:</i> machine projects</p>
-      <!-- <a class=" btn btn-outline-dark text-center" href="/project.html" style="font-size: 1.em;">see projects 📝</a> -->
-      <a class="custom-link text-center" style="color: #514645;" href="/project.html">↪
-        <u>see projects</u></a>
-    </div>
-  </div>
-
-  <div class="body-container body-2 container-fluid text-center pt-5 px-3 pb-3"
-    style="background-image: url(assets/img/yes.png); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
-    <div class="body-1-inside">
-      <h3 class="heading-two-color" style="font-weight: bold;">fave song atm!</h3>
-      <div class="py-4">
-        <iframe src="https://open.spotify.com/embed/track/1SPDWTBH7qcjbZ8zMRXlQ9" width="300" height="300"
-          frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
-      <!-- <a class=" btn btn-outline-dark text-center" href="http://open.spotify.com/user/stephensalamante"
-        style="font-size: 1.em;">steph's spotify 🌟</a> -->
-      <!-- <div class="custom-link">↪ to my spotify</div> -->
-      <a class="custom-link text-center" style="color: #514645;" href="http://open.spotify.com/user/stephensalamante">↪
-        <u>to my spotify</u></a>
+  <div class="container-flex px-4 h-100 d-flex">
+    <div class="justify-content-center align-self-center">
+      <!-- <h1 style="font-weight: bold; ">stephen salamante</h1> -->
+      <h1 class="special-header">stephen salamante</h1>
+      senior comsci student<br>
+      de la salle unviersity
+      <br><br><br>
+      <br><br><br>
+      <br><br><br>
+      <br><br><br>
+      <br><br><br>
+      <br><br><br>
+      <span><span id="header_typed"></span></span>
     </div>
   </div>
 
@@ -112,12 +114,19 @@
   <!-- SCRIPT -->
   <script src="assets/js/script.js"></script>
   <script>
+    // var header_typed = new Typed('#header_typed', {
+    //   strings: ['i love design, tech, and everything in between', 'my pronouns are he/him', 'currently, a third year dlsu ccs student'],
+    //   typeSpeed: 40,
+    //   backSpeed: 0,
+    //   smartBackspace: true,
+    //   loop: true
+    // });
+
     var header_typed = new Typed('#header_typed', {
-      strings: ['i love design, tech, and everything in between', 'my pronouns are he/him', 'currently, a third year dlsu ccs student'],
-      typeSpeed: 40,
+      strings: ['design and tech rule the world.'],
+      typeSpeed: 60,
       backSpeed: 0,
-      smartBackspace: true,
-      loop: true
+      loop: false
     });
   </script>
 </body>
