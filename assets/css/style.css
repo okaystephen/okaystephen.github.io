@@ -26,6 +26,11 @@ body {
   font-size: 14px;
 }
 
+nav {
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+}
+
 .active {
   text-decoration: none!important;
 }
