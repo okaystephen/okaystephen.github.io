@@ -16,6 +16,10 @@ body {
 }
 
 .body {
+  /* background-image: url('../img/gradient_bg.png'); */
+  background: url('../img/gradient_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #F6EEE3;
   color: #514645;
   font-family: 'Epilogue', sans-serif;
