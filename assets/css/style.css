@@ -26,6 +26,15 @@ body {
   font-size: 14px;
 }
 
+pre {
+  font-family: 'Epilogue', sans-serif !important;
+  font-size: 14px !important;
+}
+
+a {
+  color: #514645 !important;
+}
+
 nav {
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
