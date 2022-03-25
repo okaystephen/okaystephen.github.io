@@ -26,6 +26,28 @@ body {
   font-size: 14px;
 }
 
+.body-about {
+  background: url('../img/about-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom left;
+  background-color: #F6EEE3;
+  color: #514645;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+}
+
+.body-proj {
+  background: url('../img/proj-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  background-color: #F6EEE3;
+  color: #514645;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+}
+
 pre {
   font-family: 'Epilogue', sans-serif !important;
   font-size: 14px !important;
