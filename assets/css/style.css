@@ -13,7 +13,7 @@
 
 body {
   cursor: crosshair;
-  background-color: #F6EEE3;
+  /* background-color: #F6EEE3; */
 }
 
 .body {
@@ -22,6 +22,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #514645;
+  background-color: #eeede1;
   font-family: 'Epilogue', sans-serif;
   font-size: 14px;
 }
@@ -32,6 +33,7 @@ body {
   background-size: cover;
   background-position: bottom left;
   color: #514645;
+  background-color: #eeede1;
   font-family: 'Epilogue', sans-serif;
   font-size: 14px;
 }
@@ -42,6 +44,7 @@ body {
   background-size: cover;
   background-position: left;
   color: #514645;
+  background-color: #eeede1;
   font-family: 'Epilogue', sans-serif;
   font-size: 14px;
 }
