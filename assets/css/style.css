@@ -7,8 +7,8 @@
 */
 
 @font-face {
-    font-family: "ITC Grouch";
-    src: url('ITCGrouch.ttf') format("truetype");
+  font-family: "ITC Grouch";
+  src: url('ITCGrouch.ttf') format("truetype");
 }
 
 body {
@@ -17,10 +17,10 @@ body {
 }
 
 .body {
-  /* background-image: url('../img/gradient_bg.png'); */
   background: url('../img/gradient_bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right top;
   color: #514645;
   background-color: #eeede1;
   font-family: 'Epilogue', sans-serif;
@@ -64,7 +64,7 @@ nav {
 }
 
 .active {
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 .padding-top {
@@ -75,16 +75,17 @@ nav {
   font-family: "ITC Grouch";
 }
 
-p, span {
+p,
+span {
   color: #514645;
 }
 
-.navbar { 
+.navbar {
   /* background-color: #8ead95;  */
   font-family: 'Epilogue', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #514645 !important; 
+  color: #514645 !important;
   opacity: 0.9;
   transition: top 0.4s;
 }
@@ -129,6 +130,18 @@ p, span {
   box-shadow: 10px 10px #8ead95;
 } */
 
+.index-header {
+  position: absolute;
+  left: 25;
+  top: 20%;
+}
+
+.index-typed {
+  position: absolute;
+  left: 25;
+  bottom: 20%;
+}
+
 .noise {
   background-image: url('../img/noisy.gif');
   position: absolute;
@@ -138,7 +151,7 @@ p, span {
   right: 15;
   opacity: 0.3;
   transition: .5s ease;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .noise:hover {
@@ -151,7 +164,7 @@ p, span {
   opacity: 0;
   transition: .5s ease;
   background-color: rgba(259, 67, 95, 0.7);
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .active {
@@ -227,6 +240,6 @@ footer a:hover {
   color: #514645;
   /* color: #fdfdfc; */
   text-decoration: none;
-  text-shadow:0 0 8px white;
+  text-shadow: 0 0 8px white;
   transition-duration: 0.4s;
 }
