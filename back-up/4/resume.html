@@ -5,9 +5,9 @@
   <meta name="description" content="stephen's personal website">
   <meta name="keywords" content="personal, portfolio, web, art">
   <meta name="author" content="Stephen Salamante">
-  <meta http-equiv="refresh" content="1; url = https://okaystephen.github.io/portfolio" />
+  <meta http-equiv="refresh" content="2; url = http://linkedin.com/in/stephensalamante/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stephen salamante</title>
+  <title>stephen! ✰ resume</title>
 
   <!-- CSS FILES -->
   <link rel="shortcut icon" href="assets/img/fav.png">
@@ -39,15 +39,32 @@
 </head>
 
 <body class="body">
+  <!-- NAVBAR -->
+  <div id="nav"></div>
+  <script>
+    $(document).ready(function () {
+      $('#nav').load('nav.html');
+    });
+  </script>
+
   <!-- HEADER -->
   <div class="header-container container-fluid text-left p-5"
     style="background-image: url(assets/img/noisy.gif); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
     <div class="header-text text-center">
       <p><i class="fas fa-running fa-3x" style="color: white; text-shadow: 0 0 20px whitesmoke;"></i></p>
-      <h1 style="font-weight: bold; text-shadow: 0 0 20px whitesmoke; color: white;">hold on
+      <h1 style="font-weight: bold; text-shadow: 0 0 20px whitesmoke; color: white;">will redirect u to my linkedin, for
+        now<i>!</i>
       </h1>
     </div>
   </div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+  <script>
+    $(document).ready(function () {
+      $('#footer').load('footer.html');
+    });
+  </script>
 
   <!-- SCRIPT -->
   <script src="assets/js/script.js"></script>

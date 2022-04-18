@@ -1,0 +1,120 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="stephen's personal website">
+  <meta name="keywords" content="personal, portfolio, web, art">
+  <meta name="author" content="Stephen Salamante">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stephen!</title>
+
+  <!-- CSS FILES -->
+  <link rel="shortcut icon" href="assets/img/fav.png?">
+  <link rel="stylesheet" type="text/css" media="all" href="assets/css/style.css">
+  <!-- FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!--   Core JS Files   -->
+  <script src="https://kit.fontawesome.com/a2bb66671d.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!--   Scroll Reveal   -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!--   Typed.js   -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2bb66671d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body w3-animate-opacity">
+  <!-- NAVBAR -->
+  <!-- <div id="nav"></div>
+  <script>
+    $(document).ready(function () {
+      $('#nav').load('nav.html');
+    });
+  </script> -->
+
+  <nav class="navbar navbar-expand-lg fixed-top px-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-hamburger" style="color:#514645; font-size:28px;"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse navbar-right" id="navbarToggler">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/project.html">projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.pdf">resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-flex px-4 pt-4 h-100 d-flex">
+    <div class="justify-content-center align-self-center">
+      <div class="index-header">
+        <h1 class="special-header">stephen salamante</h1>
+        senior comsci student
+        <br>
+        de la salle university
+      </div>
+      <span class="index-typed"><span id="header_typed"></span></span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('#footer').load('footer.html');
+    });
+  </script>
+
+  <!-- SCRIPT -->
+  <script src="assets/js/script.js"></script>
+  <script>
+    // var header_typed = new Typed('#header_typed', {
+    //   strings: ['i love design, tech, and everything in between', 'my pronouns are he/him', 'currently, a third year dlsu ccs student'],
+    //   typeSpeed: 40,
+    //   backSpeed: 0,
+    //   smartBackspace: true,
+    //   loop: true
+    // });
+
+    var header_typed = new Typed('#header_typed', {
+      strings: ['design and tech rule the world.'],
+      typeSpeed: 60,
+      backSpeed: 0,
+      loop: false
+    });
+  </script>
+</body>
+
+</html>
