@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="stephen's personal website">
+    <meta name="keywords" content="personal, portfolio, web, art">
+    <meta name="author" content="Stephen Salamante">
+    <!-- <meta property="og:image" content="http://okaystephen.github.io/portfolio/snapshot.jpg" /> -->
+    <meta property="og:title" content="stephen salamante" />
+    <meta property="og:description" content="stephen's personal website" />
+    <!-- <meta property="og:url" content="http://okaystephen.github.io/portfolio/" />
+    <meta http-equiv="refresh" content="1; url = https://okaystephen.github.io/portfolio" /> -->
+    <title>mapbox wrld</title>
+
+    <!-- CSS FILES -->
+    <link rel="shortcut icon" href="assets/img/fav.png">
+
+    <!-- FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!--   Core JS Files   -->
+    <script src="https://kit.fontawesome.com/a2bb66671d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--   Scroll Reveal   -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--   Typed.js   -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a2bb66671d.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body {
+        /* font-family: 'Epilogue', sans-serif !important; */
+        font-family: 'Manrope', sans-serif !important;
+        /* font-family: 'Archivo', sans-serif; */
+    }
+
+    button {
+        border-radius: 90px !important;
+    }
+
+    #footer {
+        bottom: 15;
+        max-width: 30vw;
+        min-height: 50px;
+        background-color: white;
+        border-radius: 90px;
+    }
+
+    #footer i {
+        cursor: pointer;
+        color: burlywood;
+    }
+</style>
+
+<body>
+    <div id="footer" class="fixed-bottom shadow d-flex justify-content-center align-items-center m-auto">
+        <h5 class="pr-3" onclick="search()"><i class="bi-search"></i></h5>
+        <h5 onclick="info()"><i class="bi-github"></i></h5>
+    </div>
+    <div id='map' style='width: 100vw; height: 100vh;'></div>
+
+    <!-- Intro Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalTitle">mapbox 🌏</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    welcome to mapbox wrld!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalTitle">search 🔍</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Input the longitude and latitude
+                    <hr>
+                    <div class="form-group">
+                        <label for="longitude">Longitude</label>
+                        <input type="number" class="form-control" id="longitude" min="0" value="120.99" step=".25"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="latitude">Latitude</label>
+                        <input type="number" class="form-control" id="latitude" min="0" value="14.45" step=".25"
+                            required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="random()">🚀 🌎</button>
+                    <button type="button" class="btn btn-primary" onclick="fly()">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        console.log("ready!");
+        $('#myModal').modal('show');
+    })
+
+    function info() {
+        window.location.href = "https://github.com/okaystephen";
+    }
+
+    function search() {
+        $('#searchModal').modal('show');
+    }
+
+    function random() {
+        $('#searchModal').modal('hide');
+        map.flyTo({
+            center: [
+                120.99 + (Math.random() - 0.5) * 10,
+                14.45 + (Math.random() - 0.5) * 10
+            ],
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    }
+
+    function fly() {
+        $('#searchModal').modal('hide');
+        map.flyTo({
+            center: [
+                $('#longitude').val(),
+                $('#latitude').val()
+            ],
+            essential: true // this animation is considered essential with respect to prefers-reduced-motion
+        });
+    }
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoibXVqaXN0ZXBoIiwiYSI6ImNrdDhsM2c2bzEzNnAycXJ3Nno3NWlsNDgifQ.ve2gXdSlQ-Cs9OLwASsWXg';
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [120.99, 14.45],
+        zoom: 14, // starting zoom,     
+        minZoom: 4.7,
+        maxZoom: 22,
+        // maxBounds: bounds // Set the map's geographical boundaries.
+    });
+    map.addControl(new mapboxgl.NavigationControl());
+</script>
+
+</html>
