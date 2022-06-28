@@ -63,6 +63,11 @@
         min-height: 100vh;
     }
 
+    .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
     .rotate {
         animation: rotation 6s infinite linear;
     }
@@ -93,10 +98,10 @@
 </style>
 
 <body>
+    <div class="container-fluid fixed-top text-center py-4">
+        my fave song atm,
+    </div>
     <div class="container d-flex flex-column justify-content-center align-items-center">
-        <div class="pb-4">
-            my fave song atm,
-        </div>
         <img src="assets/img/cd.png" height="150vh" class="cd rotate paused" onclick="play()">
         <div class="pt-4 text-center">
             <small class="message">
@@ -106,20 +111,27 @@
             </small>
         </div>
     </div>
+    <div class="container-fluid fixed-bottom py-1">
+        <small>
+            <marquee class="footer"></marquee>
+        </small>
+    </div>
 </body>
 
 <script>
-    var audio = new Audio('meori.mp3');
+    var audio = new Audio('assets/music/meori.mp3');
 
     function play() {
         console.log(audio)
         if ($(".cd").hasClass("paused")) {
             $(".cd").removeClass("paused")
-            $(".message").html("playing...<br><br>lee hi (ft. wonstein) — h.k.s.t.")
+            $(".message").html("playing...")
+            $(".footer").text("lee hi (ft. wonstein) — h.k.s.t.")
             audio.play();
         } else {
             $(".cd").addClass("paused")
             $(".message").html("i hope you like it too. <br><br>tap to start...")
+            $(".footer").text("")
             audio.pause();
         }
     }
