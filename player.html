@@ -67,6 +67,10 @@
         animation: rotation 6s infinite linear;
     }
 
+    .paused {
+        animation-play-state: paused;
+    }
+
     @keyframes fadeInAnimation {
         0% {
             opacity: 0;
@@ -93,7 +97,7 @@
         <div class="pb-4">
             my fave song atm,
         </div>
-        <img src="assets/img/cd.png" height="150vh" class="cd" onclick="play()">
+        <img src="assets/img/cd.png" height="150vh" class="cd rotate paused" onclick="play()">
         <div class="pt-4 text-center">
             <small class="message">
                 i hope you like it too.
@@ -105,18 +109,18 @@
 </body>
 
 <script>
-    var audio = new Audio('assets/music/meori.mp3');
+    var audio = new Audio('meori.mp3');
 
     function play() {
         console.log(audio)
-        if ($(".cd").hasClass("rotate")) {
-            $(".cd").removeClass("rotate")
-            $(".message").html("i hope you like it too. <br><br>tap to start...")
-            audio.pause();
-        } else {
-            $(".cd").addClass("rotate")
+        if ($(".cd").hasClass("paused")) {
+            $(".cd").removeClass("paused")
             $(".message").html("playing...<br><br>lee hi (ft. wonstein) — h.k.s.t.")
             audio.play();
+        } else {
+            $(".cd").addClass("paused")
+            $(".message").html("i hope you like it too. <br><br>tap to start...")
+            audio.pause();
         }
     }
 </script>
