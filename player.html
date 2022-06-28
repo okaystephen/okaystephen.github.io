@@ -54,6 +54,9 @@
 
     body {
         font-family: 'IBM Plex Mono', monospace !important;
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
 
     .container {
@@ -62,6 +65,16 @@
 
     .rotate {
         animation: rotation 6s infinite linear;
+    }
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
     @keyframes rotation {
@@ -80,7 +93,7 @@
         <div class="pb-4">
             my fave song atm,
         </div>
-        <img src="cd.png" height="150vh" class="cd" onclick="play()">
+        <img src="assets/img/cd.png" height="150vh" class="cd" onclick="play()">
         <div class="pt-4 text-center">
             <small class="message">
                 i hope you like it too.
@@ -92,7 +105,7 @@
 </body>
 
 <script>
-    var audio = new Audio('meori.mp3');
+    var audio = new Audio('assets/music/meori.mp3');
 
     function play() {
         console.log(audio)
