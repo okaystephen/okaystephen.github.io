@@ -2,8 +2,11 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="description" content="stephen's personal website">
+  <meta name="keywords" content="personal, portfolio, web, art">
+  <meta name="author" content="Stephen Salamante">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stephen! - about</title>
+  <title>stephen! ✰ about</title>
 
   <!-- CSS FILES -->
   <link rel="shortcut icon" href="assets/img/rainbow.png">
@@ -45,10 +48,21 @@
 
   <!-- HEADER -->
   <div class="header-container container-fluid text-left p-5"
-    style="background-image: url(assets/img/source.gif); background-size: cover; background-repeat: no-repeat; background-position: right; opacity: 0.9;">
-    <div class="header-text text-center">
-      <h1 class="heading-color" style="font-weight: bold; ">😳</h1>
-      <span style="color: white; ">about page a work in progress!</span>
+    style="background-image: url(assets/img/about-bg.png); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0.9;">
+    <div class="header-text">
+      <h1 class="heading-about-color" style="font-weight: bold; ">about me!</h1>
+      <span><span id="aboutheader_typed" class="heading-about-color"></span></span>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="body-container body-1 container-fluid text-center px-2 p-5"
+    style="background-image: url(assets/img/noisy.gif); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: black; opacity: 0.5; height: 50%;">
+    <div class="body-1-inside">
+      <h1 style="font-weight: bold; text-shadow: 0 0 20px whitesmoke; color: white;">fixing it
+        brb<i>!</i>
+      </h1>
+      <div class="pt-3" style="color: white;">currently swarmed with acads</div>
     </div>
   </div>
 
@@ -62,6 +76,15 @@
 
   <!-- SCRIPT -->
   <script src="assets/js/script.js"></script>
+  <script>
+    var aboutheader_typed = new Typed('#aboutheader_typed', {
+      strings: ['in the mind of a boy with a dysfunctional body clock'],
+      typeSpeed: 40,
+      backSpeed: 0,
+      smartBackspace: true,
+      loop: false
+    });
+  </script>
 </body>
 
 </html>
