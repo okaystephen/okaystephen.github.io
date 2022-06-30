@@ -121,6 +121,14 @@
 <script>
     var audio = new Audio('assets/music/meori.mp3');
 
+    audio.addEventListener("ended", function () {
+        console.log("ended");
+        audio.currentTime = 0;
+        $(".cd").addClass("paused")
+        $(".message").html("i hope you like it too. <br><br>tap to start...")
+        $(".footer").text("")
+    });
+
     function play() {
         console.log(audio)
         if ($(".cd").hasClass("paused")) {
