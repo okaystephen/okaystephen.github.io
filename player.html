@@ -99,16 +99,24 @@
 
 <body>
     <div class="container-fluid fixed-top text-center py-4">
-        my fave song atm,
+        my fave songs atm,
     </div>
-    <div class="container d-flex flex-column justify-content-center align-items-center">
-        <img src="assets/img/cd.png" height="150vh" class="cd rotate paused" onclick="play()">
-        <div class="pt-4 text-center">
-            <small class="message">
-                i hope you like it too.
-                <br><br>
-                tap to start...
-            </small>
+    <div class="container px-5 d-flex flex-row justify-content-between align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <img src="assets/img/cd1.png" height="150vh" class="cd1 rotate paused" onclick="play('01', this)">
+            <div class="pt-4 text-center">
+                <small class="message1">
+                    _01
+                </small>
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <img src="assets/img/cd2.png" height="150vh" class="cd2 rotate paused" onclick="play('02', this)">
+            <div class="pt-4 text-center">
+                <small class="message2">
+                    _02
+                </small>
+            </div>
         </div>
     </div>
     <div class="container-fluid fixed-bottom py-1">
@@ -119,28 +127,67 @@
 </body>
 
 <script>
-    var audio = new Audio('assets/music/meori.mp3');
+    var track01 = new Audio('assets/music/meori.mp3');
+    var track01_name = 'lee hi (ft. wonstein) — h.k.s.t.'
 
-    audio.addEventListener("ended", function () {
-        console.log("ended");
-        audio.currentTime = 0;
-        $(".cd").addClass("paused")
-        $(".message").html("i hope you like it too. <br><br>tap to start...")
+    var track02 = new Audio('assets/music/bamboleo.mp3');
+    var track02_name = 'red velvet — bamboleo'
+
+    track01.addEventListener("play", function () {
+        track02.pause();
+        $(".cd2").addClass("paused")
+        $(".message2").html("_02")
+        $(".footer").text(track01_name)
+    });
+
+    track02.addEventListener("play", function () {
+        track01.pause();
+        $(".cd1").addClass("paused")
+        $(".message1").html("_01")
+        $(".footer").text(track02_name)
+    });
+
+    track01.addEventListener("ended", function () {
+        track01.currentTime = 0;
+        $(".cd1").addClass("paused")
+        $(".message1").html("_01")
         $(".footer").text("")
     });
 
-    function play() {
-        console.log(audio)
-        if ($(".cd").hasClass("paused")) {
-            $(".cd").removeClass("paused")
-            $(".message").html("playing...")
-            $(".footer").text("lee hi (ft. wonstein) — h.k.s.t.")
-            audio.play();
-        } else {
-            $(".cd").addClass("paused")
-            $(".message").html("i hope you like it too. <br><br>tap to start...")
-            $(".footer").text("")
-            audio.pause();
+    track02.addEventListener("ended", function () {
+        track02.currentTime = 0;
+        $(".cd2").addClass("paused")
+        $(".message2").html("_02")
+        $(".footer").text("")
+    });
+
+    function play(track, e) {
+        console.log(track)
+        console.log(e)
+        if (track == '01') {
+            if ($(".cd1").hasClass("paused")) {
+                $(".cd1").removeClass("paused")
+                $(".message1").html("playing...")
+                $(".footer").text(track01_name)
+                track01.play();
+            } else {
+                $(".cd1").addClass("paused")
+                $(".message1").html("_01")
+                $(".footer").text("")
+                track01.pause();
+            }
+        } else if (track == '02') {
+            if ($(".cd2").hasClass("paused")) {
+                $(".cd2").removeClass("paused")
+                $(".message2").html("playing...")
+                $(".footer").text(track02_name)
+                track02.play();
+            } else {
+                $(".cd2").addClass("paused")
+                $(".message2").html("_02")
+                $(".footer").text("")
+                track02.pause();
+            }
         }
     }
 </script>
