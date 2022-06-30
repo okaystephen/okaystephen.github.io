@@ -101,7 +101,7 @@
     <div class="container-fluid fixed-top text-center py-4">
         my fave songs atm,
     </div>
-    <div class="container px-5 d-flex flex-row justify-content-between align-items-center">
+    <div class="container px-3 d-flex flex-row justify-content-between align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
             <img src="assets/img/cd1.png" height="150vh" class="cd1 rotate paused" onclick="play('01', this)">
             <div class="pt-4 text-center">
@@ -162,8 +162,6 @@
     });
 
     function play(track, e) {
-        console.log(track)
-        console.log(e)
         if (track == '01') {
             if ($(".cd1").hasClass("paused")) {
                 $(".cd1").removeClass("paused")
