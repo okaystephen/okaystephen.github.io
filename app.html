@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>App Center</title>
+
+    <!-- FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--   Core JS Files   -->
+    <script src="https://kit.fontawesome.com/a2bb66671d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--   Scroll Reveal   -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--   Typed.js   -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a2bb66671d.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
+</head>
+
+<style>
+    .card {
+        transition: .5s;
+    }
+
+    .card:hover {
+        transition: .5s;
+    }
+</style>
+
+<body>
+    <div class="container-fluid px-5 pt-5 pb-3">
+        <div class="row">
+            <div class="col">
+                App Center Testing
+            </div>
+            <div class="col text-right">
+                <button type="button" class="btn btn-primary" onclick="purr()">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-5 pb-3">
+        <div class="row">
+            <div class="col">
+                <input type="name" class="form-control search" placeholder="Search app..." onkeyup="search()">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-5">
+        <div class="row yourboat">
+            <!-- <div class="card-col col-sm-2 col-md-2 p-3">
+                <div class="card">
+                    <img class="card-img-top"
+                        src="https://i.pinimg.com/564x/bb/12/b1/bb12b1024bdce8f39a640f1746900e2c.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">${splited[Math.floor(Math.random() * splited.length)]}
+                            ${splited[Math.floor(Math.random() * splited.length)]}</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        console.log("document is ready");
+        $(".card").hover(
+            function () {
+                $(this).addClass('shadow').css('cursor', 'pointer');
+            }, function () {
+                $(this).removeClass('shadow');
+            }
+        );
+    });
+
+    var text = "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Suspendisse Finibus Nunc Vestibulum Tortor Eleifend Elementum. Mauris Interdum Urna Purus, Id Egestas Sapien Ultrices Eget. Praesent Aliquam Scelerisque Aliquam. Nam Ac Posuere Nibh, Et Sollicitudin Leo. Nunc Finibus Arcu A Neque Ultrices, Eget Iaculis Ex Elementum. Aliquam Porta Iaculis Elit Eget Scelerisque. Nulla Ornare Ligula Urna, At Posuere Felis Volutpat A. Aenean Mi Lorem, Facilisis Sed Mollis Eget, Rhoncus Vehicula Leo. Ut Sagittis Commodo Nisi. Fusce Tincidunt Viverra Accumsan. Vivamus Quis Porta Magna. Mauris Ultrices Lobortis Sem, Eget Faucibus Lectus Maximus A. Curabitur Dolor Neque, Pretium Vel Ultricies Nec, Porta Vel Lectus. Curabitur Mattis Nibh Quis Tortor Convallis Faucibus."
+    var splited = text.split(" ")
+
+    function purr() {
+        console.log()
+
+        $('.yourboat').append(`
+            <div class="card-col col-lg-2 p-3">
+                <div class="card">
+                    <img class="card-img-top"
+                        src="https://i.pinimg.com/564x/bb/12/b1/bb12b1024bdce8f39a640f1746900e2c.jpg"
+                        alt="Card image cap">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">${splited[Math.floor(Math.random() * splited.length)]} ${splited[Math.floor(Math.random() * splited.length)]}</h5>
+                        <p class="card-text">${splited[Math.floor(Math.random() * splited.length)]} ${splited[Math.floor(Math.random() * splited.length)]}</p>
+                    </div>
+                </div>
+            </div>
+        `)
+    }
+
+    function search() {
+        $('.card-title').each(function (idx) {
+            var val = $(this).text()
+            var searchKey = $('.search').val()
+            if (val.toLowerCase().includes(searchKey.toLowerCase())) {
+                $(this).parents('.card-col').show()
+            } else {
+                $(this).parents('.card-col').hide()
+            }
+        })
+    }
+</script>
+
+</html>
