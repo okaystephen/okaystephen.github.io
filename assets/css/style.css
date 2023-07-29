@@ -236,3 +236,17 @@ footer a:hover {
   text-shadow: 0 0 8px white;
   transition-duration: 0.4s;
 }
+
+.header-background {
+  z-index: 100;
+  backdrop-filter: blur(2px);
+  background: rgb(238, 237, 225);
+  background: linear-gradient(180deg, rgba(238, 237, 225, 0.9178824972) 28%, rgba(238, 237, 225, 0) 100%);
+}
+
+.footer-background {
+  z-index: 100;
+  backdrop-filter: blur(1px);
+  background: rgb(238, 237, 225);
+  background: linear-gradient(0deg, rgba(238, 237, 225, 0.9178824972) 28%, rgba(238, 237, 225, 0) 100%);
+}
