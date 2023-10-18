@@ -69,9 +69,28 @@
                     { text: "To whom it may concern,", margin: [5, 40, 5, 50] },
                     { text: "I hereby authorize my mother, Erlinda Salamante, to use my Landers card.", margin: [5, 0, 5, 130] },
                     { text: "Best regards,", margin: [5, 0, 5, 6] },
+                    {
+                        // in browser is supported loading images via url from reference by name in images
+                        image: 'sig'
+                    },
                     { text: "Stephen Salamante", margin: [5, 0, 5, 0] },
                 ],
                 defaultStyle: {
+                },
+                images: {
+                    mySuperImage: 'data:image/jpeg;base64,...content...',
+
+                    // in browser is supported loading images via url (https or http protocol) (minimal version: 0.1.67)
+                    sig: 'https://picsum.photos/seed/picsum/200/300',
+
+                    // is supported loading images via url with custom headers (minimal version: 0.2.5)
+                    strawberries: {
+                        url: 'https://picsum.photos/id/1080/367/267',
+                        headers: {
+                            myheader: '123',
+                            myotherheader: 'abc',
+                        }
+                    }
                 }
             };
 
