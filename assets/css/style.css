@@ -79,6 +79,10 @@ span {
   color: #514645;
 }
 
+.bold {
+  font-weight: 500;
+}
+
 .navbar {
   /* background-color: #8ead95;  */
   font-family: 'Epilogue', sans-serif;
