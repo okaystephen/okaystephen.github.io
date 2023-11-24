@@ -44,8 +44,8 @@
                 <div class="form-group pt-3 pb-2">
                     <label for="selected-name">For</label>
                     <select id="selected-name" class="form-control">
-                        <option selected value="0">Mom</option>
-                        <option value="1">Dad</option>
+                        <option selected value="mother">Mom</option>
+                        <option value="father">Dad</option>
                     </select>
                 </div>
                 <hr>
@@ -67,7 +67,7 @@
                 date = selectedDate;
             }
 
-            if ($("#selected-name").val() == "0") {
+            if ($("#selected-name").val() == "mother") {
                 selectedName = 'Erlinda';
             } else {
                 selectedName = 'Ver';
@@ -77,7 +77,7 @@
                 content: [
                     { text: `${date.toLocaleDateString('en-EN', options)}`, margin: [5, 170, 5, 50] },
                     { text: "To whom it may concern,", margin: [5, 40, 5, 50] },
-                    { text: `I hereby authorize my mother, ${selectedName} Salamante, to use my Landers card.`, margin: [5, 0, 5, 130] },
+                    { text: `I hereby authorize my ${$('#selected-name').val()}, ${selectedName} Salamante, to use my Landers card.`, margin: [5, 0, 5, 130] },
                     { text: "Best regards,", margin: [5, 0, 5, 6] },
                     { text: "Stephen Salamante", margin: [5, 0, 5, 0] },
                 ],
