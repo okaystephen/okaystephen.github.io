@@ -5,8 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lander's Authorization Letter</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.56/pdfmake.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.56/vfs_fonts.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.56/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.56/vfs_fonts.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/pdfmake.min.js"
+        integrity="sha512-5wC3oH3tojdOtHBV6B4TXjlGc0E2uk3YViSrWnv1VUmmVlQDAs1lcupsqqpwjh8jIuodzADYK5xCL5Dkg/ving=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/vfs_fonts.js"
+        integrity="sha512-nNkHPz+lD0Wf0eFGO0ZDxr+lWiFalFutgVeGkPdVgrG4eXDYUnhfEj9Zmg1QkrJFLC0tGs8ZExyU/1mjs4j93w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -82,17 +90,13 @@
                     { text: "To whom it may concern,", margin: [5, 40, 5, 50] },
                     { text: `I hereby authorize my ${$('#selected-name').val()}, ${selectedName} Salamante, to use my Landers card.`, margin: [5, 0, 5, 130] },
                     { text: "Regards,", margin: [5, 0, 5, 6] },
-                    {
-                        // in browser is supported loading images via url from reference by name in images
-                        image: 'snow'
-                    },
+                    { image: 'sig' },
                     { text: "Stephen Salamante", margin: [5, 0, 5, 0] },
                 ],
                 defaultStyle: {
                 },
                 images: {
-                    // in browser is supported loading images via url (https or http protocol) (minimal version: 0.1.67)
-                    snow: 'https://picsum.photos/seed/picsum/200/300',
+                    sig: 'https://lh3.googleusercontent.com/drive-viewer/AEYmBYQZWrXl-EXZvV3ac0-eQtlJjGdttHnkUbaKeqXRgxPAGjJwsukrSdP_wqTgDHNBXfZk2IziezNuGku6QG95_p__oDMv9w=w100',
                 }
             };
 
