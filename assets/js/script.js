@@ -3,6 +3,10 @@ dragElement($('.move-2')[0]);
 dragElement($('.move-3')[0]);
 dragElement($('.move-4')[0]);
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     elmnt.onmousedown = dragMouseDown;
