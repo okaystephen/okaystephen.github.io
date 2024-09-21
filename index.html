@@ -76,6 +76,10 @@
     cursor: pointer;
   }
 
+  .nav {
+    background: transparent;
+  }
+
   a {
     color: #212529;
     text-decoration: underline;
@@ -90,10 +94,10 @@
 
 <body>
   <div class="container-fluid p-5">
-    <div class="row pt-3 pb-5 sticky-top">
+    <div class="row pt-3 pb-5 sticky-top nav">
       <div class="col serif">
         <div class="d-flex justify-content-between align-items-center">
-          <div class="text-left">
+          <div id="title-name" class="text-left" style="cursor: pointer;">
             stephen salamante
           </div>
           <!-- add music player soon -->
@@ -104,7 +108,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col col-lg-5 arial">
+      <!-- bio - main -->
+      <div class="col col-lg-5 arial bio-main">
         <div class="d-flex justify-content-between align-items-start pb-5">
           <div>
             <b>I TRY TO</b>
@@ -167,7 +172,102 @@
           </div>
         </div>
       </div>
-      <div class="col d-none d-sm-block d-md-block">
+
+      <!-- bio - more -->
+      <div class="col col-lg-5 arial bio-more">
+        <div class="d-flex justify-content-between align-items-start pb-5">
+          <div>
+            <b>WORK</b>
+          </div>
+          <div class="content text-right">
+            Software Engineer
+            <br>
+            <small>Navitaire (2022—)</small>
+            <br><br>
+            Product Intern
+            <br>
+            <small>Navitaire (2022)</small>
+            <br><br>
+            Research Assistant
+            <br>
+            <small>De La Salle University (2021—2022)</small>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-start pb-5">
+          <div>
+            <b>EDUCATION</b>
+          </div>
+          <div class="content text-right">
+            B.S. Computer Science,
+            <br>
+            Major in Software Tech.
+            <br>
+            <small>Honorable Mention</small>
+            <br>
+            <small>De La Salle University (2018—2022)</small>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-start pb-5">
+          <div>
+            <b>VOLUNTEER</b>
+          </div>
+          <div class="content text-right">
+            Design Engineer,
+            <br>
+            Committee
+            <br>
+            <small>Google DSC - DLSU (2021)</small>
+            <br><br>
+
+            Creatives,
+            <br>
+            Vice President
+            <br>
+            <small>La Salle Computer Society (2020—2021)</small>
+            <br><br>
+
+            Creatives,
+            <br>
+            Associate Vice President
+            <br>
+            <small>La Salle Computer Society (2019—2020)</small>
+            <br><br>
+
+            Creatives,
+            <br>
+            Junior Officer
+            <br>
+            <small>La Salle Computer Society (2018—2019)</small>
+            <br><br>
+
+            Developer,
+            <br>
+            Full Stack
+            <br>
+            <small>The Initative PH (2020)</small>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <b>CONTACT</b>
+          </div>
+          <div class="content text-right">
+            <a href="http://instagram.com/mujisteph/" target="_blank">Instagram</a>
+            <br>
+            <a href="https://www.linkedin.com/in/stephensalamante/" target="_blank">LinkedIn</a>
+            <br>
+            <a href="https://read.cv/stephens" target="_blank">Resume/CV</a>
+            <br>
+            <a href="mailto:stephensalamante@icloud.com">Mail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- images -->
+      <div class="col d-none d-sm-block d-md-block" style="max-height: 100vh;">
         <div class="move move-1">
           <img src="assets/img/frame6.png">
         </div>

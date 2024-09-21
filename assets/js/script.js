@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    $('.bio-more').hide();
+});
+
 dragElement($('.move-1')[0]);
 dragElement($('.move-2')[0]);
 dragElement($('.move-3')[0]);
@@ -41,3 +45,13 @@ function dragElement(elmnt) {
         document.onmousemove = null;
     }
 }
+
+$("#title-name").on("click", function () {
+    if ($('.bio-main').is(":hidden")) {
+        $('.bio-main').show();
+        $('.bio-more').hide();
+    } else {
+        $('.bio-main').hide();
+        $('.bio-more').show();
+    }
+});
