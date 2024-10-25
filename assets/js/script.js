@@ -69,7 +69,8 @@ $("#title-name").on("click", function () {
         "“Those sounds, on such a quiet night, sounded like heartbeats.” \n― Your Name Engraved Herein (2020)",
         "“As long as there is love, there will be grief.” \n― Heidi Priebi",
         "“You said that memories exist outside of time and have no beginning or end.” \n― Euphoria (2019)",
-        "“Every rejection, every disappointment has led you here to this moment.” \n― Everything Everywhere All at Once (2022)"
+        "“Every rejection, every disappointment has led you here to this moment.” \n― Everything Everywhere All at Once (2022)",
+        "“If memories could be canned, would they also have expiry dates? If so, I hope they last for centuries.” \n― Chungking Express (1994)"
     ];
     alert(words[Math.floor(Math.random() * words.length)]);
 });
