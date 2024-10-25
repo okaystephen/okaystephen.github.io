@@ -1,59 +1,90 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
-
 $(document).ready(function () {
-    $('.bio-more').hide();
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // insert images + animation
+    var imgs = [
+        `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-0.png"></div>`,
+        `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-1.png" style="width: 14vw;"></div>`,
+        `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-2.png" style="width: 12vw;"></div>`,
+        `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-3.png" style="width: 20vw;"></div>`,
+    ];
+
+    for (let i = 0; i < imgs.length; i++) {
+        $("#image").append(imgs[i]);
+    }
+
+    var images = $(".move").map(function () {
+        return this;
+    }).get();
+    dragElement(images);
 });
 
-dragElement($('.move-1')[0]);
-dragElement($('.move-2')[0]);
-dragElement($('.move-3')[0]);
-dragElement($('.move-4')[0]);
+function dragElement(elements) {
+    elements.forEach(function (elmnt) {
+        var pos1 = 1200,
+            pos2 = 1200,
+            pos3 = 1200,
+            pos4 = 10000;
+        elmnt.onmousedown = dragMouseDown;
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    });
+}
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    elmnt.onmousedown = dragMouseDown;
+$("#title-name").on("click", function () {
+    var words = [
+        "“To be sensual, I think, is to respect and rejoice in the force of life, of life itself, and to be present in all that one does, from the effort of loving to the breaking of bread.” \n― James Baldwin, The Fire Next Time",
+        "“Those sounds, on such a quiet night, sounded like heartbeats.” \n― Your Name Engraved Herein (2020)",
+        "“As long as there is love, there will be grief.” \n― Heidi Priebi",
+        "“You said that memories exist outside of time and have no beginning or end.” \n― Euphoria (2019)",
+        "“Every rejection, every disappointment has led you here to this moment.” \n― Everything Everywhere All at Once (2022)"
+    ];
+    alert(words[Math.floor(Math.random() * words.length)]);
+});
 
-    function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-    }
+var moveHeight = document.getElementById('bio').clientHeight;
+var moveWidth = document.getElementById('image').clientWidth;
 
-    function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        // stop moving when mouse button is released:
-        document.onmouseup = null;
-        document.onmousemove = null;
+function getPos(coordinate) {
+    if (coordinate == "x") {
+        return (getRandom(0, moveWidth - 300));
+    } else {
+        return (getRandom(0, moveHeight - 300));
     }
 }
 
-$("#title-name").on("click", function () {
-    if ($('.bio-main').is(":hidden")) {
-        $('.bio-main').show();
-        $('.bio-more').hide();
-    } else {
-        $('.bio-main').hide();
-        $('.bio-more').show();
-    }
-});
+function getRandom(min, max) {
+    return Math.random() * (max - min) + min;
+}
