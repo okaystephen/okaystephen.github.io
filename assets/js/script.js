@@ -2,7 +2,19 @@ $(document).ready(function () {
     document.addEventListener('contextmenu', event => event.preventDefault());
 
     // insert images + animation
+    var music = [
+        `https://open.spotify.com/embed/track/53xj4nMCGtcFV2kieeI5pk`,
+        `https://open.spotify.com/embed/track/5gSHlT2SI0dtjeHrjj96A1`,
+        `https://open.spotify.com/embed/track/0OaWxhWXB47J93vzObroan`,
+        `https://open.spotify.com/embed/track/1ZEFYW6nPEvIcsIvymgsLk`,
+        `https://open.spotify.com/embed/track/2joEpsXflccZD0ZwKEdz5m`,
+        `https://open.spotify.com/embed/track/4cwJYLZeVMTjF6o0Nzk9nq`,
+        `https://open.spotify.com/embed/track/6ZCGKyXcGbYc6tdP6unPVY`,
+        `https://open.spotify.com/embed/track/0zgDfVY84eFIzgTvK9KutN`,
+    ];
+
     var imgs = [
+        `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px; width: 100%;"><iframe class="shadow-md" style="border-radius:12px" src="${music[Math.floor(Math.random() * music.length)]}?utm_source=generator" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`,
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-0.png"></div>`,
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-1.png" style="width: 14vw;"></div>`,
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-2.png" style="width: 12vw;"></div>`,
