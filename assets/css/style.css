@@ -2,6 +2,7 @@
 
 body {
   cursor: crosshair;
+  overflow-x: hidden;
 }
 
 .serif {
