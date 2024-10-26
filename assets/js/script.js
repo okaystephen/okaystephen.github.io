@@ -33,10 +33,10 @@ $(document).ready(function () {
 
 function dragElement(elements) {
     elements.forEach(function (elmnt) {
-        var pos1 = 1200,
-            pos2 = 1200,
-            pos3 = 1200,
-            pos4 = 10000;
+        var pos1 = 0,
+            pos2 = 0,
+            pos3 = 0,
+            pos4 = 0;
         elmnt.onmousedown = dragMouseDown;
 
         function dragMouseDown(e) {
