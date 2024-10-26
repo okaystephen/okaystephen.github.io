@@ -14,7 +14,7 @@ $(document).ready(function () {
     ];
 
     var imgs = [
-        `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px; width: 100%;"><iframe class="shadow-md" style="border-radius:12px" src="${music[Math.floor(Math.random() * music.length)]}?utm_source=generator" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`,
+        `<div class="move p-4" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px; width: 60%;"><iframe class="shadow-md" style="border-radius:12px" src="${music[Math.floor(Math.random() * music.length)]}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>`,
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-0.png"></div>`,
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-1.png" style="width: 14vw;"></div>`,
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-2.png" style="width: 12vw;"></div>`,
