@@ -19,6 +19,7 @@ $(document).ready(function () {
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-1.png" style="width: 14vw;"></div>`,
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-2.png" style="width: 12vw;"></div>`,
         `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-3.png" style="width: 20vw;"></div>`,
+        `<div class="move" style="left: ${getPos(`x`)}px; top: ${getPos(`y`)}px;"><img src="assets/img/frame-4.png" style="width: 16vw;"></div>`,
     ];
 
     for (let i = 0; i < imgs.length; i++) {
