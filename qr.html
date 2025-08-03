@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="assets/img/favicon.ico?" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The happenings in Stephen Salamante's world." />
+  <meta name="keywords" content="personal, portfolio, web" />
+  <meta name="author" content="Stephen Salamante" />
+  <meta property="og:title" content="Stephen Salamante" />
+  <meta property="og:description" content="The happenings in Stephen Salamante's world." />
+  <meta property="og:url" content="https://www.stephensalamante.com/" />
+  <title>Stephen Salamante — QR Code</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+</head>
+
+<style>
+  #qr-maya.active {
+    background-color: #5cb85c !important;
+    border-color: #5cb85c !important;
+  }
+
+  #qr-seabank.active {
+    background-color: #d6803a !important;
+    border-color: #d6803a !important;
+  }
+
+  /* #qr-gcash.active {
+    background-color: #5cb85c !important;
+    border-color: #5cb85c !important;
+  } */
+
+  #qr-bpi.active {
+    background-color: #d04141 !important;
+    border-color: #d04141 !important;
+  }
+
+  #qr-unionbank.active {
+    background-color: #ddb230 !important;
+    border-color: #ddb230 !important;
+  }
+</style>
+
+<body>
+  <div class="container-fluid p-5 d-flex flex-column align-items-center justify-content-center"
+    style="min-height: 100vh; min-width: 100vw;">
+
+    <div class="serif pb-5" style="cursor: help;" onclick="alert('for my beloved friends ^____^')">
+      kkb
+    </div>
+
+    <div class="row d-flex flex-row align-items-center">
+      <div class="col-sm">
+        <div class="list-group" id="qr-list">
+          <a href="#" id="qr-maya" class="list-group-item list-group-item-action" onclick="selectedQr('maya')">Maya</a>
+          <a href="#" id="qr-seabank" class="list-group-item list-group-item-action"
+            onclick="selectedQr('seabank')">Seabank</a>
+          <a href="#" id="qr-gcash" class="list-group-item list-group-item-action"
+            onclick="selectedQr('gcash')">GCash</a>
+          <a href="#" id="qr-bpi" class="list-group-item list-group-item-action" onclick="selectedQr('bpi')">BPI</a>
+          <a href="#" id="qr-unionbank" class="list-group-item list-group-item-action"
+            onclick="selectedQr('unionbank')">Unionbank</a>
+        </div>
+      </div>
+      <div class="col-sm-6 text-center">
+        <div class="card shadow-sm">
+          <img class="card-img-top" id="qr-image" src="assets/img/80e2ba1d4543228711ae3401040348be.jpg">
+          <div class="card-body">
+            <code>plz select</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-pills card-header-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Maya</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Seabank</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">GCash</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">BPI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Unionbank</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <div class="row d-flex justify-content-center">
+          <div class="col-sm-3">
+            <img class="card-img-top" id="qr-image" src="assets/img/80e2ba1d4543228711ae3401040348be.jpg">
+            <div class="pt-3">
+              <code>plz select</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1846262223&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      <div
+        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+        <a href="https://soundcloud.com/kynewwwman" title="Ky Newman" target="_blank"
+          style="color: #cccccc; text-decoration: none;">Ky Newman</a> · <a
+          href="https://soundcloud.com/kynewwwman/everything-is-360" title="Everything is 360" target="_blank"
+          style="color: #cccccc; text-decoration: none;">Everything is 360</a>
+      </div>
+    </div> -->
+  </div>
+
+  <script>
+    function selectedQr(payment) {
+      if ($("#qr-" + payment).hasClass('active')) {
+        $("#qr-list>a.active").removeClass("active");
+        $('.card-img-top').attr('src', 'assets/img/80e2ba1d4543228711ae3401040348be.jpg');
+        $('.card-body').html('<code>plz select</code>')
+      } else {
+        $("#qr-list>a.active").removeClass("active");
+        switch (payment) {
+          case 'maya':
+            $('#qr-maya').addClass('active')
+            $('.card-img-top').attr('src', 'assets/img/qr/qr-maya.png');
+            $('.card-body').html('<code>09158631322</code>')
+            break
+          case 'seabank':
+            $('#qr-seabank').addClass('active')
+            $('.card-img-top').attr('src', 'assets/img/qr/qr-seabank.png');
+            $('.card-body').html('<code>12387270166</code>')
+            break
+          case 'gcash':
+            $('#qr-gcash').addClass('active')
+            $('.card-img-top').attr('src', 'assets/img/qr/qr-gcash.png');
+            $('.card-body').html('<code>09158631322</code>')
+            break
+          case 'bpi':
+            $('#qr-bpi').addClass('active')
+            $('.card-img-top').attr('src', 'assets/img/qr/qr-bpi.png');
+            $('.card-body').html('<code>0649424272</code>')
+            break
+          case 'unionbank':
+            $('#qr-unionbank').addClass('active')
+            $('.card-img-top').attr('src', 'assets/img/qr/qr-unionbank.png');
+            $('.card-body').html('<code>1098 9500 9110</code>')
+            break
+          default:
+            $('.card-img-top').attr('src', 'assets/img/80e2ba1d4543228711ae3401040348be.jpg');
+            $('.card-body').html('<code>plz select</code>')
+        }
+      }
+    }
+  </script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

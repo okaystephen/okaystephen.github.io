@@ -63,3 +63,14 @@ img {
   /* color: rgb(61, 61, 61); */
   color: black;
 }
+
+.toolz {
+  cursor: help;
+}
+
+.toolz:hover {
+  cursor: help;
+  /* text-decoration: underline; */
+  font-style: italic;
+  transition: 0.3s;
+}

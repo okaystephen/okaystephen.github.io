@@ -73,7 +73,6 @@ function dragElement(elements) {
 }
 
 function toolz() {
-    // alert("testing")
     prompt("Is it better to speak or die?", "I’d never even have the courage to ask such a question.");
 }
 
@@ -81,7 +80,7 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
 
-$("#title-name").on("click", function () {
+function words() {
     var words = [
         "“To be sensual, I think, is to respect and rejoice in the force of life, of life itself, and to be present in all that one does, from the effort of loving to the breaking of bread.” \n― James Baldwin, The Fire Next Time",
         "“Those sounds, on such a quiet night, sounded like heartbeats.” \n― Your Name Engraved Herein (2020)",
@@ -91,7 +90,7 @@ $("#title-name").on("click", function () {
         "“If memories could be canned, would they also have expiry dates? If so, I hope they last for centuries.” \n― Chungking Express (1994)"
     ];
     alert(words[Math.floor(Math.random() * words.length)]);
-});
+}
 
 var moveHeight = document.getElementById('bio').clientHeight;
 var moveWidth = document.getElementById('image').clientWidth;
