@@ -3,6 +3,8 @@ $(document).ready(function () {
 
     // insert images + animation
     var music = [
+        `https://open.spotify.com/embed/track/7gKxCvTDWwV9wBhdeBbr3l`,
+        `https://open.spotify.com/embed/track/1XwbJNPOcLuSRTQNR9zz4r`,
         `https://open.spotify.com/embed/track/53xj4nMCGtcFV2kieeI5pk`,
         `https://open.spotify.com/embed/track/5gSHlT2SI0dtjeHrjj96A1`,
         `https://open.spotify.com/embed/track/0OaWxhWXB47J93vzObroan`,
