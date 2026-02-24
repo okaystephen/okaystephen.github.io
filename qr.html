@@ -129,44 +129,45 @@
   </div>
 
   <script>
-    function selectedQr(payment) {
-      if ($("#qr-" + payment).hasClass('active')) {
-        $("#qr-list>a.active").removeClass("active");
-        $('.card-img-top').attr('src', 'assets/img/80e2ba1d4543228711ae3401040348be.jpg');
-        $('.card-body').html('<code>plz select</code>')
-      } else {
-        $("#qr-list>a.active").removeClass("active");
-        switch (payment) {
-          case 'maya':
-            $('#qr-maya').addClass('active')
-            $('.card-img-top').attr('src', 'assets/img/qr/qr-maya.png');
-            $('.card-body').html('<code>09158631322</code>')
-            break
-          case 'seabank':
-            $('#qr-seabank').addClass('active')
-            $('.card-img-top').attr('src', 'assets/img/qr/qr-seabank.png');
-            $('.card-body').html('<code>12387270166</code>')
-            break
-          case 'gcash':
-            $('#qr-gcash').addClass('active')
-            $('.card-img-top').attr('src', 'assets/img/qr/qr-gcash.png');
-            $('.card-body').html('<code>09158631322</code>')
-            break
-          case 'bpi':
-            $('#qr-bpi').addClass('active')
-            $('.card-img-top').attr('src', 'assets/img/qr/qr-bpi.png');
-            $('.card-body').html('<code>0649424272</code>')
-            break
-          case 'unionbank':
-            $('#qr-unionbank').addClass('active')
-            $('.card-img-top').attr('src', 'assets/img/qr/qr-unionbank.png');
-            $('.card-body').html('<code>1098 9500 9110</code>')
-            break
-          default:
-            $('.card-img-top').attr('src', 'assets/img/80e2ba1d4543228711ae3401040348be.jpg');
-            $('.card-body').html('<code>plz select</code>')
-        }
+    const qrMap = {
+      maya: {
+        img: 'assets/img/qr/qr-maya.png',
+        number: '09158631322'
+      },
+      seabank: {
+        img: 'assets/img/qr/qr-seabank.png',
+        number: '12387270166'
+      },
+      gcash: {
+        img: 'assets/img/qr/qr-gcash.png',
+        number: '09158631322'
+      },
+      bpi: {
+        img: 'assets/img/qr/qr-bpi.png',
+        number: '0649424272'
+      },
+      unionbank: {
+        img: 'assets/img/qr/qr-unionbank.png',
+        number: '1098 9500 9110'
       }
+    };
+
+    // Preload
+    Object.values(qrMap).forEach(item => {
+      const img = new Image();
+      img.src = item.img;
+    });
+
+    function selectedQr(payment) {
+      $("#qr-list>a.active").removeClass("active");
+
+      if (!qrMap[payment]) return;
+
+      const { img, number } = qrMap[payment];
+
+      $('.card-img-top').attr('src', img);
+      $('.card-body').html(`<code>${number}</code>`);
+      $(`#qr-${payment}`).addClass('active');
     }
   </script>
 
